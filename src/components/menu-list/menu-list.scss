@@ -1,0 +1,11 @@
+.menu {
+    &__list {
+        min-height: calc(100vh - 60px);
+        padding: 20px 5%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
