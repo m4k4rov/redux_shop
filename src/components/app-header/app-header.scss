@@ -11,6 +11,24 @@
         font-size: 18px;
         color: #fff;
         text-decoration: none;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            transform: scale(0);
+            transform-origin: right;
+            background-color: #fff;
+            bottom: -2px;
+            transition: transform 1s, opacity 1s;
+            opacity: 0;
+        }
+        &.active::before {
+            transform-origin: left;
+            transform: scale(1);
+            opacity: 1;
+        }
     }
     &__cart {
         width: 20px;
